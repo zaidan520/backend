@@ -3,6 +3,13 @@ const express = require('express')
 const app = express()
 const port = 4000
 
+
+const github = {
+    name: ali,
+    class: BSSE,
+    roll_No: 178
+}
+
 app.get('/', (req, res)=>{
     res.send("hello backend!")
 })
@@ -15,6 +22,9 @@ app.get('/login', (req, res)=>{
 
 app.get('/youtube', (req, res)=>{
      res.send("<input type='text' placeholder='name'>")
+})
+app.get('/data', (req, res)=>{
+    res.json(github)
 })
 app.listen(process.env.PORT, ()=>{
     console.log(`Example app listening on port ${port}`)
